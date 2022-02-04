@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import MovieCard from './MovieCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Add from './Add';
+import './add.css';
+
 
 const MovieList = ({ movies, addMovie }) => {
 	const [show, setShow] = useState(false);
@@ -17,7 +19,7 @@ const MovieList = ({ movies, addMovie }) => {
 
 				</div>
 			))}
-			<button onClick={handleShow}>add</button>
+			<button className='btnadd' onClick={handleShow}>add</button>
 			<Add addMovie={addMovie} show={show} handleClose={handleClose} />
 		</>
 	);

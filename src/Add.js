@@ -1,13 +1,14 @@
 import React,{useState} from 'react';
 import { Modal, Button, Form, Col } from 'react-bootstrap';
-import StarRatingComponent from 'react-star-rating-component';
+import StarRatingComponent from 'react-star-rating-component' ;
+import './add.css';
 
 const Add = ({ show, handleClose, addMovie }) => {
     const [newMovie, setNewMovie] = useState({
         Title:"",
-        rate:1,
+        rating:1,
         description:"",
-        main_img:""
+        Poster:""
     })
     const onStarClick = (nextValue) => {
         setNewMovie({ ...newMovie, rate: nextValue })
@@ -38,7 +39,7 @@ const Add = ({ show, handleClose, addMovie }) => {
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicimageurl">
                             <Form.Label>image url</Form.Label>
-                            <Form.Control type="password" placeholder="image url" onChange={handleChange} name="main_img" />
+                            <Form.Control type="password" placeholder="image url" onChange={handleChange} name="Poster" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicdescription">
                             <Form.Label>description</Form.Label>
